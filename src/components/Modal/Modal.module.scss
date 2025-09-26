@@ -1,0 +1,50 @@
+.modalContainer {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#overlay {
+    position: absolute;
+    inset: 0;
+    background-color: #000000;
+    opacity: 0.7;
+}
+
+#body {
+    z-index: 1;
+    position: relative;
+    width: 50%;
+    min-width: 200px;
+    max-width: 500px;
+}
+
+.closeBtn {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    border: none;
+    border-radius: 100%;
+    width: 26px;
+    height: 26px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.inner {
+    min-width: 200px;
+    max-height: 600px;
+    min-height: 200px;
+    overflow-y: auto;
+    background-color: #fff;
+    box-shadow: 0 0 4px #adadad;
+    border-radius: 10px;
+    padding: 16px 20px;
+}

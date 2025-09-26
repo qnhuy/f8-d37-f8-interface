@@ -1,0 +1,42 @@
+.wrapper {
+    border: 2px solid #ececec;
+    height: 36px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    min-width: 220px;
+    max-width: 500px;
+    width: 40%;
+    position: relative;
+    color: #a7a7a7;
+    transition: all 0.3s;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.searchIcon {
+    padding: 0 8px 0 14px;
+    color: #949494;
+}
+
+.input {
+    border: none;
+    outline: none;
+    height: 100%;
+    font-size: 1.4rem;
+    width: 85%;
+}
+
+.cancelIcon {
+    position: absolute;
+    right: 12px;
+    font-size: 1.4rem;
+    transition: all 0.3s;
+
+    &:hover {
+        color: #444444;
+    }
+}

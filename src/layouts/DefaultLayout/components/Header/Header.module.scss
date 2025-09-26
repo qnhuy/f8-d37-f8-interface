@@ -1,0 +1,14 @@
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e8ebed;
+    padding: 0 14px;
+    height: 65px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}

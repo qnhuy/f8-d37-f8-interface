@@ -1,0 +1,41 @@
+.sidebarContainer {
+    width: 96px;
+    height: 100%;
+    padding: 16px 10px;
+}
+
+.navItem {
+    text-decoration: none;
+    color: #5e5e5e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 6px;
+    margin-bottom: 4px;
+    border-radius: 12px;
+    width: 72px;
+    height: 72px;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: rgb(244, 244, 244);
+    }
+}
+
+.selected {
+    background-color: rgb(240, 240, 240) !important;
+}
+
+.navItem p {
+    text-align: center;
+    font: {
+        size: 1.2rem;
+        weight: 500;
+    };
+}
+
+.icon {
+    font-size: 2.1rem;
+    margin-bottom: 6px;
+}
