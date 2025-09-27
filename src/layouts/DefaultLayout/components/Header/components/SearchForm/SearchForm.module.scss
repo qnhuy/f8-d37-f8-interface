@@ -85,6 +85,11 @@
 .blockSeeMore {
     font-size: 1.3rem;
     cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        color: black;
+    }
 }
 
 .resultItem {

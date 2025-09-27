@@ -8,29 +8,29 @@ import styles from './Modal.module.scss'
 const Modal = ({
     children,
     isOpen = false,
-    onAfterOpen,
-    onAfterClose,
-    onRequestClose,
-    closeTimeoutMS,
-    overlayClassName,
+    onAfterOpen = () => { },
+    onAfterClose = () => { },
+    onRequestClose = () => { },
+    closeTimeoutMS = 0,
     bodyClassName,
-    bodyOpenClassName,
-    htmlOpenClassName,
+    overlayClassName,
+    webBodyOpenClass,
+    webHtmlOpenClass,
     shouldCloseOnOverlayClick = true,
     shouldCloseOnEsc = true,
-    overlayOpenAnimationClass,
-    overlayCloseAnimationClass,
-    bodyOpenAnimationClass,
-    bodyCloseAnimationClass,
+    bodyOpenClass,
+    bodyCloseClass,
+    overlayOpenClass,
+    overlayCloseClass,
 }) => {
-    const [overlayClasses, setOverlayClasses] = useState(clsx(overlayClassName, overlayOpenAnimationClass))
-    const [bodyClasses, setBodyClasses] = useState(clsx(bodyClassName, bodyOpenAnimationClass))
+    const [bodyClose, setBodyClose] = useState('')
+    const [overlayClose, setOverlayClose] = useState('')
 
     // hadnle close modal and close animation
     function handleRequestClose() {
         setTimeout(onRequestClose, closeTimeoutMS)
-        setOverlayClasses(overlayCloseAnimationClass)
-        setBodyClasses(bodyCloseAnimationClass)
+        setBodyClose(bodyCloseClass)
+        setOverlayClose(overlayCloseClass)
     }
 
     // handle close logic of modal
@@ -55,25 +55,34 @@ const Modal = ({
 
     // action with body of web when open the modal
     useEffect(() => {
-        document.body.classList.add(bodyOpenClassName)
-        document.body.classList.add(htmlOpenClassName)
+        document.body.classList.add(webBodyOpenClass)
+        document.body.classList.add(webHtmlOpenClass)
         return () => {
-            document.body.classList.remove(bodyOpenClassName)
-            document.body.classList.remove(htmlOpenClassName)
+            document.body.classList.remove(webBodyOpenClass)
+            document.body.classList.remove(webHtmlOpenClass)
         }
-    }, [bodyOpenClassName, htmlOpenClassName])
+    }, [webBodyOpenClass, webHtmlOpenClass])
 
     return (
         <div className={styles.modalContainer}>
             {/* overlay */}
             <div
-                id={styles.overlay}
-                className={overlayClasses}
+                className={clsx(
+                    styles.overlay,
+                    overlayClassName,
+                    overlayOpenClass,
+                    overlayClose
+                )}
                 onClick={() => shouldCloseOnOverlayClick ? handleRequestClose() : false}
             />
 
             {/* body */}
-            <div id={styles.body} className={bodyClasses}>
+            <div className={clsx(
+                styles.body,
+                bodyClassName,
+                bodyOpenClass,
+                bodyClose
+            )}>
                 {/* close button */}
                 <button className={styles.closeBtn} onClick={handleRequestClose}>
                     <i className="fa-solid fa-xmark"></i>
@@ -97,14 +106,14 @@ Modal.propTypes = {
     closeTimeoutMS: PropTypes.number,
     overlayClassName: PropTypes.string,
     bodyClassName: PropTypes.string,
-    bodyOpenClassName: PropTypes.string,
-    htmlOpenClassName: PropTypes.string,
+    webBodyOpenClass: PropTypes.string,
+    webHtmlOpenClass: PropTypes.string,
     shouldCloseOnOverlayClick: PropTypes.bool,
     shouldCloseOnEsc: PropTypes.bool,
-    overlayOpenAnimationClass: PropTypes.string,
-    overlayCloseAnimationClass: PropTypes.string,
-    bodyOpenAnimationClass: PropTypes.string,
-    bodyCloseAnimationClass: PropTypes.string,
+    overlayOpenClass: PropTypes.string,
+    overlayCloseClass: PropTypes.string,
+    bodyOpenClass: PropTypes.string,
+    bodyCloseClass: PropTypes.string,
 }
 
 export default Modal

@@ -16,7 +16,7 @@ const courses = [
     {
         imgUrl: 'https://files.fullstack.edu.vn/f8-prod/courses/6.png',
         courseTitle: 'Node & ExpressJS',
-        latest: 'No yet',
+        latest: 'Not yet',
     },
 ]
 

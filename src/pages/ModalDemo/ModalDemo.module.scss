@@ -1,8 +1,23 @@
 .modalDemoContainer {
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    margin-top: 12px;
+}
+
+.buttons h1 {
+    margin-bottom: 6px;
+    color: rgb(59, 59, 59);
+    font-weight: 500;
 }
 
 .openModalBtn {
@@ -79,4 +94,19 @@
     to {
         scale: 0;
     }
+}
+
+.overlayCustom {
+    background-color: rgba(184, 156, 156, 0.411);
+}
+
+.bodyCustom {
+    border: 2px solid rgb(255, 123, 0);
+    border-radius: 12px;
+    background-color: rgb(240, 225, 198);
+    color: black;
+}
+
+.webBody {
+    overflow: hidden;
 }
