@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import clsx from 'clsx'
 
 import styles from './Modal.module.scss'
-import clsx from 'clsx'
 
 const Modal = ({
     children,

@@ -1,0 +1,22 @@
+.tippyContainer {
+    background-color: white;
+    box-shadow: 0 0 4px #ccc;
+    border-radius: 6px;
+    min-width: 80px;
+    min-height: 80px;
+    max-height: 600px;
+    overflow-y: auto;
+    opacity: 1;
+    padding: 16px 26px;
+    z-index: 100;
+    transform: translateY(6px);
+    transition: all 0.3s;
+}
+
+.show {
+    transform: translateY(0);
+}
+
+.hide {
+    opacity: 0;
+}

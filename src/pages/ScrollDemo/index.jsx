@@ -3,7 +3,7 @@ import ScrollToTop from "../../components/ScrollToTop"
 const ScrollDemo = function () {
     return (
         <div>
-            <p>Scroll demo</p>
+            <h2 style={{ fontWeight: '500', paddingTop: '16px' }}>Scroll down to se "Go To Top" button</h2><br />
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, in enim praesentium alias ipsum eaque laborum corporis blanditiis vitae assumenda animi iusto quidem, similique maiores asperiores dolor porro! Aperiam, deserunt.
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, in enim praesentium alias ipsum eaque laborum corporis blanditiis vitae assumenda animi iusto quidem, similique maiores asperiores dolor porro! Aperiam, deserunt.

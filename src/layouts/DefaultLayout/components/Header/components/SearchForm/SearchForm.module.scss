@@ -1,15 +1,14 @@
-.wrapper {
-    border: 2px solid #ececec;
-    height: 36px;
+.searchWrapper {
+    border: 2px solid #acacac;
+    height: 40px;
     border-radius: 100px;
     display: flex;
     align-items: center;
-    overflow: hidden;
     min-width: 220px;
     max-width: 500px;
     width: 40%;
     position: relative;
-    color: #a7a7a7;
+    color: #888888;
     transition: all 0.3s;
 }
 
@@ -28,6 +27,7 @@
     height: 100%;
     font-size: 1.4rem;
     width: 85%;
+    transition: all 0.3s;
 }
 
 .cancelIcon {
@@ -39,4 +39,75 @@
     &:hover {
         color: #444444;
     }
+}
+
+.border {
+    border: 2px solid #afafaf;
+    box-shadow: 0 0 6px #c2c2c2;
+}
+
+.tippyWrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 130%;
+}
+
+.resultTitle {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.resultTitle i {
+    font-size: 1.2rem;
+    margin-bottom: -2px;
+}
+
+.searchBlock {
+    margin-top: 20px;
+}
+
+.blockTitle {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.blockTitle h3 {
+    color: black;
+    font-weight: 500;
+}
+
+.blockSeeMore {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.resultItem {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 1.4rem;
+    line-height: 18px;
+    border-radius: 6px;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: #e9e9e9;
+    }
+}
+
+.itemImg {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-right: 10px;
 }

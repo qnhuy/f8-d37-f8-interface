@@ -5,17 +5,12 @@
     align-items: center;
 }
 
-.imgBlock {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-right: 16px;
-}
-
 .img {
-    width: 100%;
+    width: 38px;
+    height: 38px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 16px;
 }
 
 .slogan {
